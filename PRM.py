@@ -100,16 +100,18 @@ elif AR ==("NA") and DA ==2:
 
 #module3  
 print("To save money")
-
-if (A >=2 or S >=2 and C >=3 and DA ==1):
+if DA==1:
     FT = 60
+elif DA==2:
+    FT = 90
+
+if A >=2 or S >=2 and C >=3 and DA ==1:
     FT >FC
     FTX =FC-FT
     print("we recommend you to buy a family ticket of $60 and save : $",FTX)  
-elif (A >=2 or S >=2 and C >=3 and DA ==2):
-    FG = 90
-    FG >FC
-    FTX =FC-FG
+elif A >=2 or S >=2 and C >=3 and DA ==2:
+    FT >FC
+    FTX =FC-FT
     print("we recommend you to buy a family ticket of $90 and save : $",FTX)
 
     
