@@ -45,7 +45,6 @@ elif DC ==D or DC <D or DC >D+7:
 
 #module2
 BN= 000
-repeat
 if DC <D+8 and DA <= 2:
     print("Enter the following details: ")
 A = int(input("The Number of Adults :"))
@@ -98,18 +97,21 @@ elif AR ==("NA") and DA ==1:
     print("Final Cost $", A*20 + C*12 + S*16)
 elif AR ==("NA") and DA ==2:
     print("Final Cost $", A*30 + C*18 + S*24)   
-     
-#module3
-if A<=2 and S<=2 and C<=3 and DA==1:
-    FT = 60
-    print("Family ticket option available at $60 ")
-elif  A<=2 or S<=2 and C<=3 and DA==2:
-    FT = 90
-    print("Family ticket option available at $90")
 
-if FT>FC:
-    print("we recommend you to buy a family and save : $", FC-FT)
-    
+#module3  
+print("To save money")
+
+if (A >=2 or S >=2 and C >=3 and DA ==1):
+    FT = 60
+    FT >FC
+    FTX =FC-FT
+    print("we recommend you to buy a family ticket of $60 and save : $",FTX)  
+elif (A >=2 or S >=2 and C >=3 and DA ==2):
+    FG = 90
+    FG >FC
+    FTX =FC-FG
+    print("we recommend you to buy a family ticket of $90 and save : $",FTX)
+
     
 
 
