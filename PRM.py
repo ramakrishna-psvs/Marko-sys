@@ -54,6 +54,8 @@ if C/A <=2:
 elif C/A >2:
     int(input("One adult can bring 2 children only please try again "))
 
+TP = A+C+S   
+
 if DA ==1:
     T = ( A*20 + C*12 + S*16)
     print("Ticket Cost $",T)
@@ -65,27 +67,27 @@ elif DA ==2:
 AR = str(input("would you like any attraction, if nothing then enter NA :"))
 if AR ==("Lion"):
     LF = int(input("how many tickets would you like :"))
-    L = (LF*2.5)
-    print("Cost of attraction", L)
-    FC = L+T
+    ATR = (LF*2.5)
+    print("Cost of attraction", ATR)
+    FC = ATR+T
     print("Final Bill is : $",FC)
     BN= BN+1
     print("Your Order Number is :", BN)
 
 elif AR ==("Penguin"):
     PF = int(input("how many would you like :"))
-    P = (PF*2)
-    print("Cost of Attractions : ", P)
-    FC = P+T
+    ATR = (PF*2)
+    print("Cost of Attractions : ", ATR)
+    FC = ATR+T
     print("Final Bill is : $",FC)
     BN= BN+1
     print("Your Order Number is :",BN)
 
 elif AR ==("Barbeque") and DA ==2:
     EB = int(input("how many would you like :"))
-    B = (EB*5)
-    print("Cost of Attractions : ", B)
-    FC = B+T
+    ATR = (EB*5)
+    print("Cost of Attractions : ", ATR)
+    FC = ATR+T
     print("Final Bill is : $",FC)
     BN= BN+1
     print("Your Order Number is :",BN)
@@ -105,15 +107,29 @@ if DA==1:
 elif DA==2:
     FT = 90
 
-if A >=2 or S >=2 and C >=3 and DA ==1:
-    FT >FC
-    FTX =FC-FT
-    print("we recommend you to buy a family ticket of $60 and save : $",FTX)  
-elif A >=2 or S >=2 and C >=3 and DA ==2:
-    FT >FC
-    FTX =FC-FT
-    print("we recommend you to buy a family ticket of $90 and save : $",FTX)
+if A >=2 or S >=2 and C ==3 and DA ==1:
+    FTX =FT+ATR
+    print("you are eligible for a family tickt at : $",FTX)  
+elif A >=2 or S >=2 and C ==3 and DA ==2:
+    FTX =FT+ATR
+    print("you are eligible for a fimily ticket at : $",FTX)
+else:
+    print("Family Ticket not eligible")
 
+if DA==1:
+    GP=TP*15
+elif DA==2:
+    GP=TP*22.5
+
+if TP >=6 and DA==1:
+    print("you are eligible for a group ticket at : $",GP )
+elif TP >=6 and DA==2:
+    print("you are eligible for a group ticket at : $",GP )
+
+if GP<FTX:
+    print("We recommend you to go for the group ticket option and save")
+elif GP>FTX:
+    print("We recommend you to go for the family ticket option")
     
 
 
