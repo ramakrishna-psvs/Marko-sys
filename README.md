@@ -1,4 +1,4 @@
-### Hi there 👋
+### Hi There 👋
 
 Here's Everything I do. 
 
